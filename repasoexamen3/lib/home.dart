@@ -1,103 +1,67 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:repasoexamen3/gradiente.dart';
+import 'carruselGalery.dart';
+import 'imgGalery.dart';
+import 'gradiente.dart';
 
 class Home extends StatelessWidget {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Stack(
-      children: [
+      body: Stack(children: [
+        Gradiente(),
+        Container(margin: EdgeInsets.only(top: 115.0), child: CarruselGalery()),
         Container(
-          width: 460,
-          height: 420,
-          margin: EdgeInsets.only(top: 120),
-          child: Image(
-            fit: BoxFit.cover,
-            image: AssetImage("assets/img/foto1.jpg"),
-          ),
+            height: 120,
+            margin: EdgeInsets.only(top: 20.0, bottom: 100),
+            child: ImgGalery()),
+        Container(
+          width: 410,
+          height: 200,
+
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(10))),
-        ),
-        Container(
-          child: Column(
-            children: [
-              // child me sirve para un hijo
-              Row(
-                children: [
-                  Column(
-                    children: [
-                      Container(),
-                      Container(),
-                    ],
-                  ),
-                  Container(),
-                ],
-              )
-            ],
+            color: Colors.white,
+            borderRadius: BorderRadius.all(Radius.circular(20.0)),
           ),
-        ),
-        Container(
+          margin: const EdgeInsets.only(top: 590),
+          //padding: const EdgeInsets.only(left: 95),
+          alignment: Alignment.topLeft,
           child: Row(
             children: [
-              // varios hijos
               Container(
-                height: 60.0,
-                width: 60.0,
-                margin: EdgeInsets.only(top: 25, left: 15),
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage("assets/img/foto1.jpg")),
-                  shape: BoxShape.circle,
+                margin: const EdgeInsets.only(bottom: 20),
+                child: Text(
+                  '''        Claudia Lizeth Puga
+        Junio 24 2021''',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontFamily: 'newsreader'),
                 ),
               ),
               Container(
-                height: 60.0,
-                width: 60.0,
-                margin: EdgeInsets.only(top: 25, left: 15),
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage("assets/img/foto1.jpg")),
-                  shape: BoxShape.circle,
-                ),
-              ),
-              Container(
-                height: 60.0,
-                width: 60.0,
-                margin: EdgeInsets.only(top: 25, left: 15),
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage("assets/img/foto1.jpg")),
-                  shape: BoxShape.circle,
-                ),
-              ),
-              Container(
-                height: 60.0,
-                width: 60.0,
-                margin: EdgeInsets.only(top: 25, left: 15),
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage("assets/img/foto1.jpg")),
-                  shape: BoxShape.circle,
-                ),
-              ),
-              Container(
-                height: 60.0,
-                width: 60.0,
-                margin: EdgeInsets.only(top: 25, left: 15),
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage("assets/img/foto1.jpg")),
-                  shape: BoxShape.circle,
+                margin: EdgeInsets.only(bottom: 70, left: 120),
+                alignment: Alignment.bottomRight,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.favorite_border,
+                      color: Colors.black54,
+                      size: 30,
+                    ),
+                    Icon(
+                      Icons.bookmark_border_sharp,
+                      color: Colors.black54,
+                      size: 30,
+                    ),
+                  ],
                 ),
               ),
             ],
           ),
         ),
-      ],
-    ));
+      ]),
+    );
   }
 }

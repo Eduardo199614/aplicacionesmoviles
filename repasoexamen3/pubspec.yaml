@@ -75,4 +75,11 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
-      - assets/img/
+      - assets/img/foto1.jpg
+      - assets/img/foto2.jpg
+  
+  fonts:
+
+      - family: newsreader
+        fonts:
+          - asset: fonts/Newsreader-VariableFont_opsz,wght.ttf    
