@@ -1,3 +1,4 @@
+import 'package:auth_buttons/auth_buttons.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
@@ -131,17 +132,46 @@ class Login extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 350, left: 10, right: 10),
+            margin: EdgeInsets.only(top: 500, left: 10, right: 10),
             child: Row(
               children: [
                 Container(
                   margin: EdgeInsets.only(),
                   child: Text(
-                    " ---------------------  OR Log in whith  ------------------",
+                    " ---------------------  Or Log in whith  ------------------",
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
-                Container()
+              ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 530, left: 120),
+            child: Row(
+              children: <Widget>[
+                GoogleAuthButton(
+                  onPressed: () {},
+                  style: const AuthButtonStyle(
+                    buttonType: AuthButtonType.icon,
+                  ),
+                ),
+                const Divider(),
+                FacebookAuthButton(
+                  onPressed: () {},
+                  style: const AuthButtonStyle(
+                    buttonType: AuthButtonType.icon,
+                    separator: 70.0,
+                  ),
+                ),
+                const Divider(),
+                TwitterAuthButton(
+                  onPressed: () {},
+                  style: const AuthButtonStyle(
+                    buttonType: AuthButtonType.icon,
+                    separator: 70.0,
+                  ),
+                ),
+                const Divider(),
               ],
             ),
           )
