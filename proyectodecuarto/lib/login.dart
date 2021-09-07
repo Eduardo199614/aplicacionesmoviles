@@ -19,80 +19,70 @@ class Login extends StatelessWidget {
       backgroundColor: Colors.blue,
       body: Stack(
         children: <Widget>[
-          //asi se crea para que tenga varios hijos
           Container(
-            child: Row(
-              children: [
-                /*Container(
-                  margin: EdgeInsets.only(top: 25, right: 55),
-                  child: MaterialButton(
-                      child: Icon(
-                        Icons.arrow_back,
-                        color: Colors.grey,
-                      ),
-                      onPressed: () {}),
-                ),*/
-                Container(
-                  margin: EdgeInsets.only(top: 20, left: 35),
-                  child: Text(
-                    "Log in",
-                    style: TextStyle(fontSize: 25, color: Colors.white),
-                  ),
-                ),
-              ],
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  begin: FractionalOffset.topCenter,
+                  end: FractionalOffset.bottomCenter,
+                  colors: <Color>[Color(0xffeDEFFFD), Color(0xffe5AA8FF)]),
+            ),
+          ),
+          //asi se crea para que tenga varios hijos
+
+          Container(
+              margin: EdgeInsets.only(top: 70, left: 40),
+              height: 150,
+              width: 300,
+              decoration: BoxDecoration(
+                //color: Colors.pink,
+                image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage('assets/img/img1.jpg')),
+              )),
+          Container(
+            margin: EdgeInsets.only(top: 230, left: 100),
+            child: Text(
+              "Acceso al sitema",
+              style: TextStyle(
+                fontSize: 28,
+                color: Colors.black,
+              ),
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 150, left: 50),
             child: Row(
-              children: [
-                Container(
-                  child: Text(
-                    "Singn up or log in \n to free emaps",
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-                Container(
-                    margin: EdgeInsets.only(left: 40),
-                    height: 120,
-                    width: 120,
-                    decoration: BoxDecoration(
-                      //color: Colors.pink,
-                      image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage('assets/img/img1.jpg')),
-                    ))
-              ],
+              children: [],
             ),
           ),
           Container(
             margin: EdgeInsets.only(left: 10, right: 25, top: 280),
             child: Column(
               children: [
-                TextField(
-                  style: TextStyle(color: Colors.white, fontSize: 20),
-                  controller: txtUserName,
-                  onChanged: (texto) {},
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Email',
-                  ),
-                ),
+                Container(
+                    color: Colors.white,
+                    child: TextField(
+                      controller: txtUserName,
+                      onChanged: (texto) {},
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Email',
+                      ),
+                    )),
                 const Divider(
                   height: 10,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
-                TextField(
-                  obscureText: true,
-                  controller: txtPassword,
-                  style: TextStyle(color: Colors.white, fontSize: 20),
-                  onChanged: (texto) {},
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Contraseña',
+                Container(
+                  color: Colors.white,
+                  child: TextField(
+                    obscureText: true,
+                    controller: txtPassword,
+                    style: TextStyle(color: Colors.black, fontSize: 20),
+                    onChanged: (texto) {},
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Contraseña',
+                    ),
                   ),
                 ),
                 Container(
@@ -102,17 +92,9 @@ class Login extends StatelessWidget {
                         Row(
                           children: [
                             Container(
-                              color: Colors.grey,
-                              width: 170,
-                              child: MaterialButton(
-                                  child: Text("Sing up",
-                                      style: TextStyle(color: Colors.white)),
-                                  onPressed: () {}),
-                            ),
-                            Container(
-                                margin: EdgeInsets.only(left: 30),
-                                color: Colors.green,
-                                width: 170,
+                                margin: EdgeInsets.only(left: 60),
+                                color: Colors.blue,
+                                width: 250,
                                 child: (MaterialButton(
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(10.0),
@@ -171,8 +153,8 @@ class Login extends StatelessWidget {
                                       }
                                     }
                                   },
-                                  color: Colors.green,
-                                  child: Text('Login',
+                                  color: Colors.blue,
+                                  child: Text('Acceder',
                                       style: TextStyle(
                                           fontSize: 15, color: Colors.white)),
                                 ))),

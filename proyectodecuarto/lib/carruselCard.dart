@@ -66,11 +66,7 @@ class _CarruselCard extends State<CarruselCard> {
                       Container(
                         alignment: Alignment.centerLeft,
                         margin: EdgeInsets.only(left: 20),
-                        /*child: Icon(
-                          Icons.timer_sharp,
-                          color: Colors.black,
-                          size: 10.0,
-                        ),*/
+                        
                       ),
                       Container(
                         alignment: Alignment.centerLeft,

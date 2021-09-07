@@ -141,15 +141,14 @@ class Alcantarrillado extends StatelessWidget {
                     }
                   },
                 ),
-                RaisedButton(
+                MaterialButton(
+                  color: Colors.white,
                   child: Text("Ingresar datos"),
                   onPressed: () {
-                    
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => DatosIngresados()));
-                    
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DatosIngresados()));
                   },
                 )
               ],

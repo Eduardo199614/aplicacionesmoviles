@@ -1,9 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:proyectodecuarto/pagina1.dart';
 //import 'package:proyectodecuarto/login.dart';
 
 import 'alcantarrillado.dart';
 import 'home.dart';
+import 'pagina1.dart';
+import 'pagina2.dart';
 
 class NavBar extends StatefulWidget {
   @override
@@ -18,6 +21,8 @@ class _NavBar extends State {
     //Perfil(),
 
     Home(),
+    Pagina1(),
+    Pagina2(),
   ];
 
   void onTapped(int index) {
