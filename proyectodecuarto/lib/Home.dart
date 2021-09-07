@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:proyectodecuarto/login.dart';
+//import 'package:proyectodecuarto/navbar.dart';
+//import 'navbar.dart';
+
+import 'carruselGalery.dart';
 
 //import 'carruselGalery.dart';
 
@@ -14,20 +19,27 @@ class Home extends StatelessWidget {
             margin: EdgeInsets.only(top: 35),
             height: 60,
             child: Row(
-              children: [
+              children: <Widget>[
                 Container(
                   height: 100,
                   width: 100,
                   alignment: Alignment.centerLeft,
                   margin: EdgeInsets.only(left: 20),
-                  child: Icon(
-                    Icons.arrow_back_sharp,
-                    color: Colors.black,
-                    size: 40.0,
-                  ),
+                  child: MaterialButton(
+                      child: Icon(
+                        Icons.arrow_back_sharp,
+                        color: Colors.black,
+                        size: 40.0,
+                      ),
+                      onPressed: () {
+                        {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Login()));
+                        }
+                      }),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 30),
+                  margin: EdgeInsets.only(left: 50),
                   alignment: Alignment.center,
                   child: Text(
                     '''Home''',
@@ -63,15 +75,15 @@ class Home extends StatelessWidget {
                   margin: EdgeInsets.only(left: 15),
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    '''Vamos hacer ejercicio''',
+                    '''Bienvenidos a la empresa de agua potable ''',
                     style: TextStyle(color: Colors.black, fontSize: 16),
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 15),
+                  margin: EdgeInsets.only(left: 55),
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    '''Ponte en forma''',
+                    '''EMAPS''',
                     style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
@@ -87,19 +99,19 @@ class Home extends StatelessWidget {
             margin: EdgeInsets.only(top: 200, left: 25),
             alignment: Alignment.center,
             decoration: BoxDecoration(
-              color: Color(0xFFFF1773A),
+              color: Color(0xFFFFFFFF),
               borderRadius: BorderRadius.circular(20),
             ),
           ),
           Container(
-            //width: 360,
-            height: 240,
-            margin: EdgeInsets.only(left: 170, top: 120),
+            width: 320,
+            height: 160,
+            margin: EdgeInsets.only(left: 45, top: 207),
             alignment: Alignment.centerRight,
             decoration: BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.fill,
-                image: AssetImage("assets/img/img4.png"),
+                image: AssetImage("assets/img/img2.png"),
               ),
             ),
           ),
@@ -109,14 +121,15 @@ class Home extends StatelessWidget {
             margin: EdgeInsets.only(left: 15, top: 410),
             alignment: Alignment.centerLeft,
             child: Text(
-              '''Ejercicios populares''',
+              '''Nuestros servicios''',
               style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
                   fontSize: 22),
             ),
           ),
-          // CarruselGalery(),
+          CarruselGalery(),
+          //NavBar()
         ],
       ),
     );

@@ -1,7 +1,9 @@
 import 'package:auth_buttons/auth_buttons.dart';
 import 'package:flutter/material.dart';
+import 'package:proyectodecuarto/navbar.dart';
 
 import 'Home.dart';
+import 'navbar.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -21,7 +23,7 @@ class Login extends StatelessWidget {
           Container(
             child: Row(
               children: [
-                Container(
+                /*Container(
                   margin: EdgeInsets.only(top: 25, right: 55),
                   child: MaterialButton(
                       child: Icon(
@@ -29,7 +31,7 @@ class Login extends StatelessWidget {
                         color: Colors.grey,
                       ),
                       onPressed: () {}),
-                ),
+                ),*/
                 Container(
                   margin: EdgeInsets.only(top: 20, left: 35),
                   child: Text(
@@ -143,9 +145,10 @@ class Login extends StatelessWidget {
                                       if (userName == "pvalverde" &&
                                           password == "pvalverde") {
                                         Navigator.push(
-                                        context,
-                                         MaterialPageRoute(builder: (context) => Home()),
-                                         );
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => NavBar()),
+                                        );
                                       } else {
                                         AlertDialog alert = AlertDialog(
                                           title: Text('Failed to login'),

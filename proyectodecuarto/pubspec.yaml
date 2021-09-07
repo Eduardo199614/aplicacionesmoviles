@@ -77,5 +77,11 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
       - assets/img/img1.jpg
+      - assets/img/img2.png
+      - assets/img/img3.jpg
+      - assets/img/img4.jpg
+      - assets/img/img5.jpg
+      - assets/img/img6.jpg
+      - assets/img/img7.jpg
 
       
