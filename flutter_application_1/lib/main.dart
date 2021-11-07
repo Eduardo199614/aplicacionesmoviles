@@ -1,42 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Navbar.dart';
+import 'package:flutter_application_1/Primera.dart';
+
+import 'Home.dart';
+import 'Primera.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'EQUIPO',
+      title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-          appBar: AppBar(
-            title: Text("Saratoga"),
-          ),
-          body: Stack(
-            fit: StackFit.expand,
-            children: [
-              Image(
-                fit: BoxFit.cover,
-                image: AssetImage('../assets/img/saratoga.jpg'),
-              ),
-              Center(
-                child: Container(
-                  alignment: Alignment.center,
-                  color: Colors.blueGrey,
-                  constraints: BoxConstraints.expand(height: 60),
-                  child: Text(
-                    "Larga vida al rock", //child es una clase hijo d
-
-                    style: TextStyle(color: Colors.orange, fontSize: 40),
-                  ),
-                ),
-              ),
-            ],
-          )),
+      home: Primera(),
     );
   }
 }

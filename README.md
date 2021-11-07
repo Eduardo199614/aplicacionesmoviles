@@ -1,2 +1,0 @@
-# aplicacionesmoviles
-Primer deber
