@@ -1,4 +1,4 @@
-import 'dart:js';
+//import 'dart:js';
 
 import 'package:aplicacion/src/Providers/peliculas_providers.dart';
 import 'package:aplicacion/src/models/actores_model.dart';
